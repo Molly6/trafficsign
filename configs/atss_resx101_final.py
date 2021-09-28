@@ -91,13 +91,14 @@ class CustomerConfig(models.ATSSConfig):
         self.test_image_max_size = 2800
 
         self.test_max_boxes_per_image = 100
-        self.test_cls_threshold = 0.05
-        self.test_nms = 0.1
+        self.test_cls_threshold = 0.1
+        self.test_nms = 0.6
 
         self.TTA = True
         self.test_aug_short_size = 2400
         self.test_aug_max_size = (3100, 3200)
-        self.test_size = [(2100,2700),(2100,2800),(2400,3200)]
+        self.test_size = [(1800,2400),(2100,2700),(2100,2800),(2400,3100),(2400,3200)]
+        # self.test_size = [(2100,2700),(2100,2800),(2400,3200)]
 
         self.test_aug_flip = False
 

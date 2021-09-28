@@ -56,7 +56,7 @@ megengine
       
    - **topk—nms**
       
-      对上述三个尺度生成的结果先进行nms，再将得到的结果框与剩下所有框进行topk—nms（保留与当前结果框iou大于0.85的top3的框，把这些框的坐标进行融合），参数设置vote_thresh=0.85, k=5。
+      对上述三个尺度生成的结果先进行nms，再将得到的结果框与剩下所有框进行topk—nms（保留与当前结果框iou大于0.85的topk的框，把这些框的坐标进行融合），参数设置vote_thresh=0.85, k=5。
     
       
  - **网络结构** 
@@ -99,4 +99,3 @@ https://github.com/MegEngine/Models/tree/master/official/vision/detection
 
 https://github.com/MegEngine/YOLOX
 
-https://github.com/PaddlePaddle/PaddleDetection/blob/f605edb9c97613ee2730260143c0aa128710f300/ppdet/utils/post_process.py#L116-L128

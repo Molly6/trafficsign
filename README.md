@@ -83,7 +83,7 @@ megengine
 ```
 pip3 install --user -r requirements.txt
 export PYTHONPATH=your_path/trafficsign:$PYTHONPATH
-cd weights；wget https://data.megengine.org.cn/models/weights/atss_resx101_coco_2x_800size_45dot6_b3a91b36.pkl
+cd weights && wget https://data.megengine.org.cn/models/weights/atss_resx101_coco_2x_800size_45dot6_b3a91b36.pkl
 python3 tools/train.py -n 4 -b 2 -f configs/atss_resx101_final.py -d your_datasetpath -w weights/atss_resx101_coco_2x_800size_45dot6_b3a91b36.pkl
 python3 tools/test_final.py -n 4 -se 35 -f configs/atss_resx101_final.py -d your_datasetpath 
 ```

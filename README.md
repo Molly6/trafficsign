@@ -24,7 +24,7 @@ megengine
         
     - **mixup增强**
       
-      随机选取两张图进行叠加，我们最终选用的比例是0.5*原图+0.5*新图片，同时其进行缩放(0.5,2.0)。  
+      随机选取两张图进行叠加，我们最终选用的比例是0.5 * 原图+0.5 * 新图片，同时其进行缩放(0.5,2.0)。  
       
     - **随机水平翻转**
       
@@ -64,7 +64,8 @@ megengine
     
     - 我们还在backbone部分尝试了dcn和gcnet，收效甚微，最终没有采用。
     
-## 模型训练与测试
+    
+## 模型训练与测试 ##
 
  - **数据集位置** 
 ```
@@ -86,5 +87,7 @@ python3 tools/train.py -n 4 -b 2 -f configs/atss_resx101_final.py -d your_datase
 python3 tools/test_final.py -n 4 -se 35 -f configs/atss_resx101_final.py -d your_datasetpath 
 ```
   (-n 能抢到几张卡就写几吧qaq)
+  
+## 备注 ##
 
-
+以上提到的所有方法，无论最终是否采用，代码中均有实现。

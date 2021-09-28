@@ -26,6 +26,10 @@ megengine
       
       随机选取两张图进行叠加，我们最终选用的比例是0.5 * 原图+0.5 * 新图片，同时其进行缩放(0.5,2.0)。  
       
+      下图为mosaic+mixup示例图：
+      
+      <img src="https://github.com/Molly6/trafficsign/blob/main/mosaic%2Bmixup.jpg" width="500"  alt="mosaic+mixup"/><br/>
+      
     - **随机水平翻转**
       
       直接对图片进行翻转，会导致第三个类别“arr_l”（左转线）和右转线混淆，故我们添加了class-aware的翻转，遇到有“arr_l”类的图片则不进行翻转。  
@@ -54,9 +58,6 @@ megengine
       
       对上述三个尺度生成的结果先进行nms，再将得到的结果框与剩下所有框进行topk—nms（保留与当前结果框iou大于0.85的top3的框，把这些框的坐标进行融合），参数设置vote_thresh=0.85, k=5。
     
-   - **固定最短边的多尺度测试**（最终提交版本未采用）
-   
-      效果没上面的好，所以最后没采用。
       
  - **网络结构** 
    
@@ -91,3 +92,11 @@ python3 tools/test_final.py -n 4 -se 35 -f configs/atss_resx101_final.py -d your
 ## 备注 ##
 
 以上提到的所有方法，无论最终是否采用，代码中均有实现。
+
+## 感谢 ##
+
+https://github.com/MegEngine/Models/tree/master/official/vision/detection
+
+https://github.com/MegEngine/YOLOX
+
+https://github.com/PaddlePaddle/PaddleDetection/blob/f605edb9c97613ee2730260143c0aa128710f300/ppdet/utils/post_process.py#L116-L128

@@ -63,7 +63,7 @@ megengine
    
     - 加上增强后，backbone从res50到res101再到resx101有稳定涨点。
     
-    - 我们还在backbone部分尝试了dcn和gcnet，收效甚微，最终没有采用。
+    - 我们还在backbone部分尝试了dcn和gcnet，验证集收效甚微，最终没有采用。
     
     
 ## 模型训练与测试 ##

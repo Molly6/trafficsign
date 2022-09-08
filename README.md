@@ -1,6 +1,6 @@
 # trafficsign
 ## 赛题
-[旷视AI智慧交通开源赛道](https://studio.brainpp.com/competition/4?name=%E6%97%B7%E8%A7%86AI%E6%99%BA%E6%85%A7%E4%BA%A4%E9%80%9A%E5%BC%80%E6%BA%90%E8%B5%9B%E9%81%93&tab=overview)，初赛1/177，复赛1/12。    
+[旷视AI智慧交通开源赛道](https://studio.brainpp.com/competition/4?name=%E6%97%B7%E8%A7%86AI%E6%99%BA%E6%85%A7%E4%BA%A4%E9%80%9A%E5%BC%80%E6%BA%90%E8%B5%9B%E9%81%93&tab=overview)，冠军方案，初赛1/177，复赛1/12。    
 本赛题为复杂场景的交通标志检测，对五种交通标志进行识别。
 ## 框架
 megengine
